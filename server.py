@@ -35,6 +35,10 @@ def check_session():
     if 'mouloud' in session:
         return jsonify({'logged_in': True, 'user': session['mouloud'],'admin':True})
     return jsonify({'logged_in': False}), 401
+@app.route('/api/test')
+def test():
+    return {'status': 'API working'}
+
 @app.route('/admin_login', methods=['POST'])
 def admin_login():
     if request.method == 'OPTIONS':
