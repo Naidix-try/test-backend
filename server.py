@@ -14,10 +14,10 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.permanent_session_lifetime = timedelta(minutes=60)
 Session(app)
 CORS(app, supports_credentials=True)
-DB_NAME = 'mydb'
+DB_NAME = 'mydb_6lrh'
 DB_USER = 'naidix'
-DB_PASSWORD = 'naidix38008040'
-DB_HOST = 'localhost'
+DB_PASSWORD = 'TGAme9ViTASsRv5SP6qWJX3AEKPfgYwG'
+DB_HOST = 'dpg-d273lcggjchc73f2njk0-a'
 DB_PORT = '5432'
 def get_db_connection():
     conn = psycopg2.connect(
@@ -168,4 +168,4 @@ def get_summary():
         'expense_by_category': expense_categories
     })
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
